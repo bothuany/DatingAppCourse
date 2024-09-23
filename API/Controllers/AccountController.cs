@@ -16,7 +16,7 @@ namespace API.Controllers
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
             if (await UserExists(registerDto.Username)) return BadRequest("Username is taken");
-            
+
             using var hmac = new HMACSHA512();
 
             var user = new AppUser
@@ -56,7 +56,7 @@ namespace API.Controllers
             {
                 Username = user.UserName,
                 Token = tokenService.CreateToken(user)
-            };      
+            };
         }
 
         private async Task<bool> UserExists(string username)
