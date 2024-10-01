@@ -1,4 +1,3 @@
-import { TitleCasePipe } from '@angular/common';
 import { AccountService } from './../_services/account.service';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
     BsDropdownModule,
     RouterLink,
     RouterLinkActive,
-    TitleCasePipe,
+
   ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css',
